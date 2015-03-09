@@ -9,8 +9,7 @@ The main goal of the project is to build a simple extensible system for taking a
 The system should allow the user to search through all the notes or todos. 
 
 The system should support extension through the use of plugins. A plugin is a python file (.py) that gets loaded automatically, as long as it is placed in the right place. An example plugin should also be provided:
-- Week
-Everywhere there is a tag "week", it should be processed as "<<< week >>>". All the other tags should be left untouched. 
+- Week - everywhere there is a tag "week", it should be processed as "<<< week >>>". All the other tags should be left untouched. 
 
 ## Run the Project
 
