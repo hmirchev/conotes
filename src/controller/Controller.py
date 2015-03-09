@@ -75,7 +75,7 @@ class Controller(object):
                 self._edit_todo(choice)
         else:
             print("Illegal input. Should be in [0, " +\
-                  str(all_texts) + "] Try again.")
+                  str(all_texts) + "]. Try again.")
             return self.process_edit_menu()
 
     def _edit_note(self, index):
@@ -147,20 +147,24 @@ class Controller(object):
             self._texts.pop(choice)
         else:
             print("Illegal input. Should be in [0, " +\
-                  str(all_texts) + "] Try again.")
+                  str(all_texts) + "]. Try again.")
 
     def process_find_menu(self):
-        choice = input(self._ui.find_menu())
+        choice = int(input(self._ui.find_menu()))
 
-        if choice == '0':
+        if choice not in list(range(0, 4)):
+            print("Illegal input. Should be in [0, 3]. Try again.")
+            return
+
+        if choice == 0:
             return
 
         pattern = input("pattern: ")
         for text in self._texts:
             found = text.matches(pattern)
-            if choice == '2':
+            if choice == 2:
                 found = found and isinstance(text, Note)
-            elif choice == '3':
+            elif choice == 3:
                 found = found and isinstance(text, ToDo)
 
             if found:

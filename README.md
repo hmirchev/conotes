@@ -13,7 +13,7 @@ The system should support extension through the use of plugins. A plugin is a py
 
 ## Run the Project
 
-Make sure to have Python 2.7+ installed.
+Make sure to have Python 3 installed.
 
 * Clone the repo
 ```shell
@@ -27,5 +27,7 @@ python CoNotes.py
 
 * Run the tests
 ```shell
-python test/{ITextTest, NoteTest, TodoTest}.py
+test/python ITextTest.py
+test/python NoteTest.py
+test/python ToDoTest.py
 ```
